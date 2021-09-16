@@ -1,5 +1,5 @@
 sign = {'+', '-'}  # list of acceptable signs
-number = {'0', '1', '2', '3', '4', '5', '6', '7', '8', '9'} # list of acceptable numbers
+number = {'0', '1', '2', '3', '4', '5', '6', '7', '8', '9'}  # list of acceptable numbers
 
 
 def check(index):  # return True/False if formula correct/incorrect,according EBNF syntax
@@ -17,7 +17,7 @@ def check(index):  # return True/False if formula correct/incorrect,according EB
 
 formula = str(input())
 length = len(formula)
-if (formula == ""):
+if (formula == "" or formula[length - 1] in sign):
     print((False, None))
     quit()
 print(check(0))
