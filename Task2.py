@@ -9,9 +9,10 @@ sign = {'add': '+', 'sub': '-', 'mul': '*', 'div': '/'}  # dictionary with opera
 if operation not in sign:
     print("Unknown operation")
     quit()
-try:
-    command = num1 + sign[operation] + num2
-    result = eval(command)  # get result of operation
-    print(result)
-except ZeroDivisionError:
-    print("Error")
+if num1.isdigit() and num2.isdigit():
+    try:
+        command = num1 + sign[operation] + num2
+        result = eval(command)  # get result of operation
+        print(result)
+    except ZeroDivisionError:
+        print("Error")
