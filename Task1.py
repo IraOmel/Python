@@ -1,11 +1,15 @@
 import sys
 
-parameters = sys.argv[1:]  # get parameters from command line
+if len(sys.argv) < 4:
+    print("Not enough parameters")
+    sys.exit(1)
+num1 = str(sys.argv[1])
+sign = str(sys.argv[2])
+num2 = str(sys.argv[3])
 
-num1 = str(parameters[0])
-sign = str(parameters[1])
-num2 = str(parameters[2])
-if num1.isdigit() and num2.isdigit():
+operation = ('+', '-', '*', '/')  # list with operations
+
+if num1.isdigit() and num2.isdigit() and sign in operation:
     try:
         command = num1 + sign + num2
         result = eval(command)
@@ -13,5 +17,5 @@ if num1.isdigit() and num2.isdigit():
     except ZeroDivisionError:
         print("Error")
 else:
-    print("Error")
+    print("Incorrect date")
     quit()
