@@ -1,0 +1,12 @@
+{
+  "IT-event1": {
+    "cost": 250,
+    "date": "10.02.2021",
+    "tickets": 5
+  },
+  "IT-event2": {
+    "cost": 100,
+    "date": "31.12.2021",
+    "tickets": 10
+  }
+}
